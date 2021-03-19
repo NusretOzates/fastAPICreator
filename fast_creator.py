@@ -25,6 +25,13 @@ def main(project_name: str,
 
     # Create the base fastapi main file. FastAPI object will be created here
     create_main(project_name, routers.split())
+    create_docker_file(project_name)
+
+
+def create_docker_file(project_name:str):
+    with open(f'{project_name}/Dockerfile','w',encoding='utf8') as file:
+        file.write('FROM tiangolo/uvicorn-gunicorn-fastapi:latest\n')
+        file.write('COPY ./app /app/app')
 
 
 def create_base_main(project_name: str):
