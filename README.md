@@ -1,5 +1,6 @@
 # FastAPI Creator CLI
 This is a CLI application written with [Typer](https://typer.tiangolo.com/) from the creator of [FastAPI](https://fastapi.tiangolo.com/)!
+You can create your router file, model files and even the Dockerfile with just one command!
 
     Usage: fast_creator.py [OPTIONS] PROJECT_NAME
 
@@ -28,8 +29,8 @@ Usage Example:
 Example Result:
 
     fastboy
+        │   Dockerfile
         │   main.py
-        │
         └───app
             │   main.py
             │   __init__.py
